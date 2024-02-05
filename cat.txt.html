@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoplay Video</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<video id="autoplayVideo" loop playsinline>
+    <source src="C:\Users\m4mad\Videos\cat\videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<button onclick="playVideo()">Play Video</button>
+
+<script>
+    function playVideo() {
+        var video = document.getElementById("autoplayVideo");
+        video.play();
+        document.body.removeEventListener("click", playVideo);
+    }
+
+    document.body.addEventListener("click", playVideo);
+</script>
+<video id="autoplayVideo" loop playsinline>
+    <source src="C:\Users\m4mad\Videos\cat\videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<button onclick="playVideo()">Play Video</button>
+
+<script>
+    function playVideo() {
+        var video = document.getElementById("autoplayVideo");
+        video.play();
+        document.body.removeEventListener("click", playVideo);
+    }
+
+    document.body.addEventListener("click", playVideo);
+</script>
+<video id="autoplayVideo" loop autoplay>
+    <source src="C:\Users\m4mad\Videos\cat\videoplayback.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<button onclick="playVideo()">Play Video</button>
+
+<script>
+    function playVideo() {
+        var video = document.getElementById("autoplayVideo");
+        video.play();
+        document.body.removeEventListener("click", playVideo);
+    }
+
+    document.body.addEventListener("click", playVideo);
+</script>
+
+
+</body>
+</html>
